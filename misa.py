@@ -32,7 +32,8 @@ def CreateMisaFiles (name):
 
     streamWriter = open (projectPath + "config.ms", "w+")
 
-    streamWriter.write ("Misa.Start ()" + newLine)
+    streamWriter.write ("Misa.Name = " + "'" + name + "''" + newLine)
+    streamWriter.write ("Misa.Dimensions = " + "(800, 600)" + newLine)
 
     streamWriter.close ()
 
