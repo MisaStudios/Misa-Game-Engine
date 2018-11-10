@@ -26,6 +26,7 @@ def CreateProject (name):
     streamWriter = open (projectPath + name + ".ms", "w+")
 
     streamWriter.write ("Misa.Start()" + newLine)
+    streamWriter.write ("Misa.Start()" + newLine)
 
     streamWriter.close ()
 
