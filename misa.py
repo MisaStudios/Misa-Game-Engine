@@ -9,8 +9,32 @@ project = sys.argv [2]
 path = os.getcwd ()
 
 projectPath = path + "/projects/" + project + "/"
-newLine = "\n"
 
+newLine = "\n"
+newLines = newLine * 2
+
+
+def CreateMisaFiles (name):
+
+    startComment = "//Everything Here Will Run Once"
+    loopComment = "//Everything Here Will Loop"
+
+    streamWriter = open (projectPath + name + ".ms", "w+")
+
+    streamWriter.write ("func start ()" + newLines)
+    streamWriter.write (startComment + newLines)
+    streamWriter.write ("func end" + newLines)
+    streamWriter.write ("func update ()" + newLines)
+    streamWriter.write (loopComment + newLines)
+    streamWriter.write ("func end" + newLine)
+
+    streamWriter.close ()
+
+    streamWriter = open (projectPath + "config.ms", "w+")
+
+    streamWriter.write ("Misa.Start ()" + newLine)
+
+    streamWriter.close ()
 
 def CreateProject (name):
 
@@ -23,12 +47,7 @@ def CreateProject (name):
     os.makedirs (projectPath + "assets/sounds")
     os.makedirs (projectPath + "assets/sprites")
 
-    streamWriter = open (projectPath + name + ".ms", "w+")
-
-    streamWriter.write ("Misa.Start()" + newLine)
-    streamWriter.write ("Misa.Start()" + newLine)
-
-    streamWriter.close ()
+    CreateMisaFiles (name)
 
 def DeleteProject (name):
 
