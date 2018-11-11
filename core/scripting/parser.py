@@ -25,7 +25,7 @@ def ParseConfig (name):
 
     conf = "import pygame" + newlines + "pygame.init ()" + newLines
 
-    configFile = projects + name + "/config.ms"
+    configFile = projects + name + "/config.misa"
 
     with open (configFile) as configStream:
 
@@ -35,14 +35,16 @@ def ParseConfig (name):
 
                 parameter = parameter.replace (tokens [4], "").replace (tokens [7], "").replace (tokens [8], "").replace (" ". "")
 
+                conf += 
+
 
 
 def Build (name):
 
-    GetTokens ("tokens.ms")
+    GetTokens ("tokens.misa")
     ParseConfig (name)
 
-    misaFile = projects + name + "/" + name + ".ms"
+    misaFile = projects + name + "/" + name + ".misa"
 
     with open (misaFile) as scriptStream:
 
@@ -50,4 +52,4 @@ def Build (name):
 
             if tokens [0] in line && tokens [1] in line:
 
-                parse +=
+                hello = "hello"
