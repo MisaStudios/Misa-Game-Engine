@@ -16,6 +16,8 @@ newLines = newLine * 2
 
 def GetTokens (tokenFile):
 
+    token.append ("Token.NULL")
+
     with open (tokenFile) as tokenStream:
 
         for token in tokenStream:
@@ -26,7 +28,7 @@ def GetTokens (tokenFile):
 
 def ParseConfig (name):
 
-    conf = "import pygame" + newlines + "pygame.init ()" + newLines
+    conf = "import pygame" + newlines + "pygame.init ()" + newLines + "Running = True" + newLines
 
     configFile = projects + name + "/config.misa"
 
@@ -34,11 +36,11 @@ def ParseConfig (name):
 
         for parameter in configStream:
 
-            if tokens [4] in parameter:
+            if tokens [1] in parameter:
 
-                parameter = parameter.replace (tokens [4], nothing).replace (tokens [7], nothing).replace (tokens [8], nothing).replace (space, nothing)
+                parameter = parameter.replace (tokens [1], nothing).replace (tokens [8], nothing).replace (tokens [9], nothing).replace (space, nothing)
 
-                conf += ""
+                conf += "pygame.display.set_caption ('" + name + "')"
 
 def Build (name):
 
