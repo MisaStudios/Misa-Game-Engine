@@ -20,5 +20,5 @@ elif argument == parameters [1]:
     handler.DeleteProject (project)
 
 elif argument == parameters [2]:
- 
+
     parser.Build (project)
