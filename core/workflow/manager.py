@@ -1,15 +1,14 @@
 import shutil
 import os
 
-path = os.getcwd ()
-
-projectPath = path + "/projects/" + project + "/"
+current = os.getcwd () + "/manager.py"
+path = os.path.dirname (current)
 
 newLine = "\n"
 newLines = newLine * 2
 
 
-def CreateMisaFiles (name):
+def CreateMisaFiles (name, projectPath):
 
     startComment = "//Everything Here Will Run Once"
     loopComment = "//Everything Here Will Loop"
@@ -34,6 +33,8 @@ def CreateMisaFiles (name):
 
 def CreateProject (name):
 
+    projectPath = path + "/projects/" + name + "/"
+
     os.makedirs (path + "/projects/" + name)
 
     os.makedirs (projectPath + "build")
@@ -43,7 +44,7 @@ def CreateProject (name):
     os.mkdir (projectPath + "assets/sounds")
     os.mkdir (projectPath + "assets/sprites")
 
-    CreateMisaFiles (name)
+    CreateMisaFiles (name, projectPath)
 
 def DeleteProject (name):
 

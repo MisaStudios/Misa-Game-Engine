@@ -12,11 +12,11 @@ project = sys.argv [2]
 
 if argument == parameters [0]:
 
-    handler.CreateProject (project)
+    manager.CreateProject (project)
 
 elif argument == parameters [1]:
 
-    handler.DeleteProject (project)
+    manager.DeleteProject (project)
 
 elif argument == parameters [2]:
 

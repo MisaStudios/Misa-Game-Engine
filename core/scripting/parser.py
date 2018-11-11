@@ -33,9 +33,9 @@ def ParseConfig (name):
 
             if tokens [4] in parameter:
 
-                parameter = parameter.replace (tokens [4], "").replace (tokens [7], "").replace (tokens [8], "").replace (" ". "")
+                parameter = parameter.replace (tokens [4], "").replace (tokens [7], "").replace (tokens [8], "")
 
-                conf += 
+                conf += ""
 
 
 
@@ -50,6 +50,6 @@ def Build (name):
 
         for line in scriptStream:
 
-            if tokens [0] in line && tokens [1] in line:
+            if tokens [0] in line & tokens [1] in line:
 
                 hello = "hello"
