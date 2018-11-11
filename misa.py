@@ -1,4 +1,4 @@
-import core.parser as parser
+import core.scripting.parser as parser
 
 import shutil
 import sys
