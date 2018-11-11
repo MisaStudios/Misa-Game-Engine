@@ -9,7 +9,6 @@ parameters = ["create", "delete", "build"]
 
 argument = sys.argv [1]
 project = sys.argv [2]
-path = os.getcwd ()
 
 if argument == parameters [0]:
 
