@@ -1,3 +1,5 @@
+import core.parser as parser
+
 import shutil
 import sys
 import os
@@ -58,8 +60,7 @@ def DeleteProject (name):
 
 def BuildProject (name):
 
-    #Build Project
-    hello = "hello"
+     parser.Build (name)
 
 
 if argument == parameters [0]:
