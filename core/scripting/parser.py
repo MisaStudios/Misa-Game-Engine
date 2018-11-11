@@ -8,6 +8,9 @@ parse = ""
 conf = ""
 tokens = []
 
+nothing = ""
+space = " "
+
 newLine = "\n"
 newLines = newLine * 2
 
@@ -33,11 +36,9 @@ def ParseConfig (name):
 
             if tokens [4] in parameter:
 
-                parameter = parameter.replace (tokens [4], "").replace (tokens [7], "").replace (tokens [8], "")
+                parameter = parameter.replace (tokens [4], nothing).replace (tokens [7], nothing).replace (tokens [8], nothing).replace (space, nothing)
 
                 conf += ""
-
-
 
 def Build (name):
 
